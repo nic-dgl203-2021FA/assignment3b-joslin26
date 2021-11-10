@@ -26,7 +26,7 @@
 
     <div class="form-group">
       <label for="pettype">Pet type</label>
-      <select class="form-control" id="pettype">
+      <select class="custom-select" id="pettype">
         <option>Choose</option>
         <option value="cat">Dog</option>
         <option value="cat">Cat</option>
@@ -40,33 +40,45 @@
       <label class="d-block">Has your pet been spayed or neutered?</label>
 
       <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="spayneut" value="yes" checked> Yes
-        </label>
+        <input class="form-check-input" id="spayneut-yes" type="radio" name="spayneut" value="yes" checked>
+        <label class="form-check-label"> Yes</label>
       </div>
 
       <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="radio" name="spayneut" value="no"> No
-        </label>
+        <input class="form-check-input" id="spayneut-no" type="radio" name="spayneut" value="no">
+        <label class="form-check-label"> No</label>
       </div>
     </div>
 
     <div class="form-group">
       <label>Has the pet had any of the following in the past 30 days</label>
 
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox"> Abdominal pain
-        </label>
+      <div class="custom-control custom-checkbox">
+        <input class="custom-control-input" type="checkbox"  id="ill-abdominal">
+        <label class="custom-control-label" id="ill-abdominal"> Abdominal pain</label>
       </div>
 
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox"> Weakness
-        </label>
+      <div class="custom-control custom-switch">
+        <input class="fcustom-control-input" type="checkbox" id="ill-weakness">
+        <label class="custom-control-label" id="ill-weakness"> Weakness</label>
       </div>
     </div>
+
+
+    <div class="form-group">
+      <label for="painlebel">Level of pain</label>
+      <input type="range" class="custom-range" min="0" max="10" id="pain">
+    </div>
+
+
+    <div class="form-group">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="petphoto">
+      </div>
+    </div>
+
+
+
   </fieldset>
 
   <button class="btn btn-primary" type="submit">Submit</button>
